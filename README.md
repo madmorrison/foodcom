@@ -81,7 +81,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![foodcom][foodcom-screenshot]](src/img/screenshot.PNG)
+![foodcomscreenshot](src/img/screenshot.PNG)
 
 Easy to use, clean interfaced web application.
 
