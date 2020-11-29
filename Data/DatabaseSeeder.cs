@@ -2,9 +2,9 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using foodcom.Models;
+using Foodcom.Models;
 
-namespace foodcom.Data
+namespace Foodcom.Data
 {
     public class DatabaseSeeder
     {
