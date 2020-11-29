@@ -16,4 +16,8 @@
     <Folder Include="test" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\.gitignore" />
+  </ItemGroup>
+
 </Project>
