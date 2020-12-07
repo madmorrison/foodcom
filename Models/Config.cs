@@ -1,4 +1,4 @@
-namespace Foodcom.Models
+namespace foodcom.Models
 {
     public class Config
     {

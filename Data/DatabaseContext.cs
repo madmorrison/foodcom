@@ -1,11 +1,11 @@
-using Foodcom.Models;
+using foodcom.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Foodcom.Data
+namespace foodcom.Data
 {
     public class DatabaseContext : DbContext
     {
-        public DbContext Config { get; set; }
+        public DbSet<Config> Config { get; set; }
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)

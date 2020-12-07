@@ -1,28 +1,31 @@
 using System;
 using System.Linq;
+using foodcom.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Foodcom.Models;
 
-namespace Foodcom.Data
+namespace foodcom.Data
 {
     public class DatabaseSeeder
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context =
-                new DatabaseContext(serviceProvider.GetRequiredService<DbContextOptions<DatabaseContext>>()))
+            using (var context =    
+                new DatabaseContext(serviceProvider.GetRequiredService<DbContextOptions<DatabaseContext>>())
+            )
             {
                 context.Database.EnsureCreated();
-
+                
                 if (!context.Config.Any())
                 {
-                    context.Config.AddRange(new[]
+                    context.Config.AddRange(new []
                     {
-                        Config.Make("database_version", "0.0.0"),
-                        Config.Make("app_name", "foodcom"),
+                        new Config
+                        {
+                            Key = "DB_VERSION",
+                            Setting = "1.0.0" 
+                        }
                     });
-
                     context.SaveChanges();
                 }
             }
